@@ -1,7 +1,13 @@
-import chai = require("chai");
-import { expect } from 'chai';
+import * as chai from 'chai';
+//import * as chaiIterator from 'chai-iterator';
 import chaiIterator = require("chai-iterator");
+
+var expect = chai.expect;
 
 chai.use(chaiIterator);
 
-expect([2, 3, 5]).to.iterate.for.lengthOf(3);
+describe('test', function () {
+    it('should be length 3', function () {
+        expect([2, 3, 5]).to.iterate.for.lengthOf(3);
+    });
+});
